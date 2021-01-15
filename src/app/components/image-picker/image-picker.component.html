@@ -1,0 +1,17 @@
+<ion-spinner *ngIf="isLoading"></ion-spinner>
+<div class="picker" *ngIf="!isLoading">
+  <ion-img 
+    *ngIf="showPreview"
+    class="image"
+    role="button"
+    (click)="selectImage()"
+    [src]="photo.path" ></ion-img>
+  <ion-button 
+    *ngIf="!showPreview"
+    color="primary" 
+    (click)="selectImage()" 
+    size="large">
+    <ion-icon name="camera" slot="start"></ion-icon> {{buttonText}}
+  </ion-button>
+
+</div>
